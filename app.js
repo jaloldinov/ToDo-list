@@ -6,8 +6,6 @@ const mongoose = require("mongoose")
 const date = require(__dirname + "/data.js");
 const _ = require("lodash");
 
-
-
 const app = express();
 
 app.set("view engine", "ejs");
@@ -15,7 +13,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 
-mongoose.connect("mongodb://localhost:27017/todolistDB", {useNewUrlParser: true})
+mongoose.connect("mongodb+srv://admin-luck:lucky-1066@cluster0.4v7sq3u.mongodb.net/todolistDB", {useNewUrlParser: true})
 
 const itemsSchema = {
   name: String
